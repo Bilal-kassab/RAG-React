@@ -3,10 +3,10 @@ import { Box, Chip, Typography } from "@mui/material";
 import type { SocketState } from "../../hooks/useChatSocket";
 
 const socketLabel: Record<SocketState, { label: string; color: "success" | "warning" | "default" | "error" }> = {
-  ready: { label: "متصل لحظياً", color: "success" },
+  ready: { label: "متصل ", color: "success" },
   connecting: { label: "جارٍ الاتصال", color: "warning" },
-  disconnected: { label: "Polling fallback", color: "default" },
-  error: { label: "Polling fallback", color: "error" },
+  disconnected: { label: "غير متصل الآن..", color: "default" },
+  error: { label: "خطأ ضمن السيرفر.. نأسف على الأمر", color: "error" },
 };
 
 export default function AssistantHeader({ socketState }: { socketState: SocketState }) {
